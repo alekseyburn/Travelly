@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (hero)
+
+mixin hero(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +hero('some-class')
+
+  -
+    // список классов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      for (let item of classes.split(',')) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section(class=`${allClasses.length > 0 ? `${allClasses}` : ``}hero`)&attributes(attributes)
+    h1.hero__title Travel beyond limits.
+    p.hero__lead Start your travel at an affordable price with Travelly <br> Contact us now bellow
+    +btn('Book now', 'hero__link')(href='/')

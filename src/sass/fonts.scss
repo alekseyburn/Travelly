@@ -1,17 +1,17 @@
-//@font-face {
-//  font-weight: normal;
-//  font-family: "Sample";
-//  font-style: normal;
-//  font-display: swap;
-//
-//  src: url("../fonts/Sample.woff2") format("woff2"), url("../fonts/Sample.woff") format("woff");
-//}
-//
-//@font-face {
-//  font-weight: bold;
-//  font-family: "Sample";
-//  font-style: normal;
-//  font-display: swap;
-//
-//  src: url("../fonts/Sample.woff2") format("woff2"), url("../fonts/Sample.woff") format("woff");
-//}
+@font-face {
+  font-weight: 400;
+  font-family: "Poppins";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Poppins";
+  font-style: normal;
+  font-display: swap;
+
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2");
+}

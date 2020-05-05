@@ -5,3 +5,17 @@
 // html.no-js .site-list {
 //   display: flex;
 // }
+
+.site-list {
+  @include reset-list();
+
+  display: flex;
+  flex: 1 1 40rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.site-list__link {
+  color: $alter-text-color;
+}

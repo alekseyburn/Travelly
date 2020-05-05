@@ -1,18 +1,23 @@
 extends ../pug/layout.pug
 
 block meta
-  title Главная
-  meta(name='description', content='')
+  title Travelly | Travelling Agency
+  meta(name='description', content='Travelly is a travel agency website that helps you pick out your holiday vacation')
+  meta(name='robots', content='index,follow')
 
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
-block nav
-  p.nothing test
+block header
+  +logo('/', 'page-header__logo')(aria-label='Go to the home page')
+    picture
+      source(type='image/webp', srcset='img/logo-travelly.webp')
+      img.logo__img(src='img/logo.png', width='130', height='55', alt='Travelly', loading='lazy')
+  +main-nav('page-header__nav')
+    +site-list('main-nav__list')
 
 block content
-  h1 Заголовок с каким-то эффектом
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
+  +hero()
 
 block footer
   p «Подвал»

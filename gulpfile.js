@@ -200,9 +200,9 @@ function optimizeImages() {
           removeViewBox: false
         }]
       }),
-      imagemin.mozjpeg({quality: 80}),
+      imagemin.mozjpeg({quality: 70}),
       pngquant({
-        quality: [0.6, 0.8],
+        quality: [0.5, 0.8],
         floyd: 1,
         speed: 1
       })
@@ -211,7 +211,7 @@ function optimizeImages() {
   let imgWebp = src(`${dir.src}img/*.{png,jpg,jpeg}`, {since: lastRun(optimizeImages)})
     .pipe(buffer())
     .pipe(webp({
-      quality: 80
+      quality: 70
     }))
     .pipe(dest(`${dir.src}img/`));
   return merge(img, imgWebp);
