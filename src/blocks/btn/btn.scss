@@ -7,4 +7,11 @@
   background-color: $accent-color;
   border: none;
   cursor: pointer;
+  will-change: background-color;
+  transition: background-color 0.5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color-hover;
+  }
 }
