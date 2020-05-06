@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (locations)
+
+mixin locations(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +locations('some-class')
+
+  -
+    // список классов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      for (let item of classes.split(',')) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section(class=`${allClasses.length > 0 ? `${allClasses}` : ``}locations`)&attributes(attributes)
+    h2.locations__title The perfect travelling experience.
+    p.locations__text We cover everything from picking the perfect hotel, <br> flight and travelling destination.

@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (benefits)
+
+mixin benefits(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +benefits('some-class')
+
+  -
+    // список классов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      for (let item of classes.split(',')) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section.section(class=`${allClasses.length > 0 ?`${allClasses} `: `` }benefits`)&attributes(attributes)
+    header.benefits__header
+      h2.benefits__title The Perfect Travel
+      p.benefits__lead We cover everything for picking the perfect hotel <br> to flight and destination.
+    +features('benefits__list')
