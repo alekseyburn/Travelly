@@ -1,0 +1,116 @@
+// В этом файле должны быть стили для БЭМ-блока locations, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.locations {
+  position: relative;
+
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../img/new-york-page.webp");
+  background-position: center;
+  background-size: cover;
+
+  grid-template-columns: 5% 1fr 5%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -20%;
+
+    display: block;
+    width: 1280px;
+    height: 831px;
+
+    background-image: url("../img/cloud.webp");
+    background-size: cover;
+
+    pointer-events: none;
+  }
+
+  &::before {
+    animation: cloudAnimation 7s infinite alternate ease-in-out;
+  }
+
+  &::after {
+    top: -23%;
+    right: 0;
+    z-index: -1;
+
+    opacity: 0.6;
+
+    animation: cloudAnimation 8s infinite alternate ease-in-out;
+  }
+}
+
+.locations__title {
+  margin: 0 0 5rem;
+
+  font-size: 4.8rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+
+  grid-column: 2 / 3;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations__text {
+  margin: 0;
+
+  font-size: 3rem;
+
+  background-image: linear-gradient(#131c27, #663b34);
+  background-clip: text;
+
+  grid-column: 2 / 3;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: $desktop-width - 1px) {
+  .locations {
+    &::before,
+    &::after {
+      right: -45%;
+      z-index: -1;
+    }
+
+    &::after {
+      top: -20%;
+      z-index: -2;
+    }
+  }
+
+  .locations__text {
+    padding: 2rem;
+
+    background-color: rgba($alter-bg-color, 0.7);
+    background-image: none;
+    background-clip: initial;
+
+    justify-self: start;
+    -webkit-text-fill-color: white;
+  }
+}
+
+@media screen and (max-width: $tablet-width - 1px) {
+  .locations {
+    &::before,
+    &::after {
+      top: -50%;
+      right: -100%;
+    }
+
+    &::after {
+      top: -34%;
+    }
+  }
+
+  .locations__text {
+  }
+}

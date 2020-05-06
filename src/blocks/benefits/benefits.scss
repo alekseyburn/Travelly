@@ -1,0 +1,30 @@
+.benefits__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  padding: 3rem;
+
+  text-align: center;
+  color: $alter-text-color;
+
+  background-color: $alter-bg-color;
+}
+
+.benefits__title {
+  margin: 0 0 1rem;
+
+  font-size: 4.8rem;
+}
+
+.benefits__lead {
+  margin: 0;
+
+  font-size: 3rem;
+}
+
+.benefits__list {
+  width: 90%;
+  margin: auto;
+}

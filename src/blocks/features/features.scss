@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока features, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 70vh;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+}
+
+.features__item {
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  padding-bottom: 2rem;
+
+  box-shadow: 0 10px 10px rgba(black, 0.1), 0 20px 20px rgba(black, 0.2), 0 25px 25px rgba(black, 0.25);
+}
+
+.features__svg {
+  width: 100%;
+  padding: 2rem;
+
+  background-color: $alter-bg-color;
+}
+
+.features__title {
+  margin: 1rem 0 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.features__text {
+  margin: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: $desktop-width - 1px) {
+  .features__item {
+    min-height: 35vh;
+    margin: 2rem 3rem;
+  }
+
+  .features__title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: $tablet-width - 1px) {
+  .features {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .features__item {
+    min-height: 25vh;
+  }
+}
