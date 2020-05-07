@@ -11,6 +11,7 @@
 
   list-style: none;
   text-align: center;
+  color: $alter-text-color;
 }
 
 .features__item {
@@ -25,6 +26,7 @@
 .features__svg {
   width: 100%;
   padding: 2rem;
+  fill: white;
 
   background-color: $main-bg-color;
 }

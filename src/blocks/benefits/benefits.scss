@@ -1,8 +1,7 @@
 .benefits__header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
   min-height: 30vh;
   padding: 3rem;
 
