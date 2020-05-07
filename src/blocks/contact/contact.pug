@@ -16,7 +16,7 @@ mixin contact(classes)
       }
     }
 
-  section(class=`${allClasses.length > 0 ? `${allClasses}` : ``}contact`)&attributes(attributes)
+  section(class=`${allClasses.length > 0 ? `${allClasses}` : ``}contact`, id='contact')&attributes(attributes)
     .contact__wrapper
       h2.contact__title Contact us
       +form('contact__form', 'post', '/')
