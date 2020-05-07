@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (contact)
+
+mixin contact(classes)
+
+  //- Принимает:
+  //-   classes    {string} - список классов
+  //- Вызов:
+        +contact('some-class')
+
+  -
+    // список классов
+    let allClasses = '';
+    if(typeof(classes) !== 'undefined' && classes) {
+      for (let item of classes.split(',')) {
+        allClasses = allClasses + item.trim();
+      }
+    }
+
+  section(class=`${allClasses.length > 0 ? `${allClasses}` : ``}contact`)&attributes(attributes)
+    .contact__wrapper
+      h2.contact__title Contact us
+      +form('contact__form', 'post', '/')
+        +field-text({
+          label: 'Name:',
+          side: 'up',
+          classes: 'form__field',
+          attrs: {
+            name: 'name',
+            required
+          }
+        })
+        +field-text({
+          label: 'Email:',
+          side: 'up',
+          classes: 'form__field',
+          attrs: {
+            name: 'email',
+            type: 'email',
+            required
+          }
+        })
+        +btn('Submit', 'form__btn', true)(class='btn--form')
