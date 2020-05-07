@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  color: $alter-text-color;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../img/contact-mountain.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact__wrapper {
+  width: 40%;
+  padding-top: 4rem;
+
+  background-color: rgba(19, 28, 39, 0.8);
+  border-radius: 20px;
+}
+
+.contact__title {
+  margin: 0 0 4rem;
+
+  font-size: 4rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: $desktop-width - 1px) {
+  .contact__wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: $tablet-width - 1px) {
+  .contact__wrapper {
+    width: 100%;
+  }
+}

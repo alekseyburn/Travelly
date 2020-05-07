@@ -1,0 +1,23 @@
+.form {
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.form__field {
+  margin-bottom: 4rem;
+
+  grid-column: 2 / 3;
+}
+
+.form__btn {
+  margin-top: 8rem;
+
+  grid-column: 1 / -1;
+}
+
+@media screen and (max-width: $desktop-width - 1px) {
+  .form {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}

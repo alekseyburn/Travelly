@@ -10,6 +10,12 @@
   will-change: background-color;
   transition: background-color 0.5s ease-in-out;
 
+  &--form {
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
   &:hover,
   &:focus {
     background-color: $accent-color-hover;
