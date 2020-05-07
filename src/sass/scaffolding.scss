@@ -24,14 +24,12 @@ body {
   margin: 0 auto;
 
   font-weight: 400;
-  //font-size: var(--text-size);
-  //line-height: var(--text-lh);
   font-size: 2rem;
   font-family: $font;
   color: $main-text-color;
   word-break: break-word;
 
-  background-color: $main-bg-color;
+  background-color: $alter-bg-color;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
