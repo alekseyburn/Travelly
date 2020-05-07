@@ -1,0 +1,18 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__logo {
+  margin-right: 1rem;
+}
+
+.copyright__text {
+  margin: 1rem 0 0;
+}
+
+@media screen and (max-width: $tablet-width - 1px) {
+  .copyright__text {
+    display: none;
+  }
+}

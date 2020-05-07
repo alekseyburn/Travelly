@@ -22,8 +22,17 @@ block content
   +benefits()
   +contact()
 block footer
-  p «Подвал»
-  p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+  +copyright('page-footer__copyright')
+  +social('page-footer__social')
+    +social-link('twitter','/','Twitter')
+      svg(class='social__svg', width='25', height='25')
+        use(xlink:href='img/sprite.svg#icon-twitter')
+    +social-link('youtube','/','Youtube')
+      svg(class='social__svg', width='27', height='27')
+        use(xlink:href='img/sprite.svg#icon-youtube')
+    +social-link('instagram','/','Instagram')
+      svg(class='social__svg', width='21', height='21')
+        use(xlink:href='img/sprite.svg#icon-instagram')
 
 //- block append page-bottom
 //-   script(src='js/some.js')

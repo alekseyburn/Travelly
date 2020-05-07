@@ -17,9 +17,8 @@ mixin copyright(classes)
     }
 
   div(class=`${allClasses.length > 0 ?`${allClasses} `: `` }copyright`)&attributes(attributes)
-    a.copyright__link(href='/', target='_blank', rel='noopener noreferrer')
+    +logo('/', 'copyright__logo')(aria-label='Go to the home page')
       picture
-        source(type='image/webp', srcset='/')
-        img.copyright__img.lazyload(src='/', width='/', height='/', alt='/', loading='lazy')
-    b.copyright__text
-    span.copyright__company
+        source(type='image/webp', srcset='img/logo-travelly.webp')
+        img.logo__img(src='img/logo.png', width='130', height='55', alt='Travelly', loading='lazy')
+    span.copyright__text Corporation
