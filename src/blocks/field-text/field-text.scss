@@ -17,4 +17,14 @@
   font: inherit;
 
   border: none;
+  border-right: 0 solid $accent-color;
+
+  transition: border-right-width 0.2s ease-in-out;
+
+  will-change: border-right-width;
+
+  &:hover,
+  &:focus {
+    border-right-width: 1rem;
+  }
 }

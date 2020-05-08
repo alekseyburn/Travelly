@@ -10,17 +10,24 @@
 
   color: $main-text-color;
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../img/contact-mountain.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.webp .contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../img/contact-mountain.webp");
+}
+
+.no-webp .contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../img/contact-mountain.png");
 }
 
 .contact__wrapper {
   width: 40%;
   padding-top: 4rem;
 
-  background-color: rgba(19, 28, 39, 0.8);
+  background-color: rgba($main-bg-color, 0.8);
   border-radius: 20px;
 }
 
