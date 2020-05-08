@@ -6,6 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 70vh;
+  align-items: flex-start;
   padding: 0;
 
   list-style: none;
@@ -46,6 +47,10 @@
 }
 
 @media screen and (max-width: $desktop-width - 1px) {
+  .features {
+    align-items: stretch;
+  }
+
   .features__item {
     min-height: 35vh;
     margin: 2rem 3rem;
