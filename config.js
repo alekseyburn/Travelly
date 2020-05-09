@@ -35,6 +35,7 @@ let config = {
     'src/img/*.{png,svg,jpg,jpeg}': 'img/',
     'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
     // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
+    'src/img/*.{h264,hevc,av1}.mp4': 'img/',
   },
   'dir': {
     'src': 'src/',
