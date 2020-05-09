@@ -83,7 +83,7 @@
     "pug-lint": "^2.6.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.17.1",
+    "stylelint-scss": "^3.17.2",
     "through2": "^3.0.1",
     "vinyl-buffer": "^1.0.1",
     "webpack": "^4.43.0",
