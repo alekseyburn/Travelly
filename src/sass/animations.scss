@@ -7,3 +7,18 @@
     transform: translate(0%, 0%);
   }
 }
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  80% {
+    transform: translate(-50%, -50%) scale(4.4);
+    background-color: rgba(white, 0.5);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
