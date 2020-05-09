@@ -20,5 +20,5 @@ mixin hero(classes)
     h1.hero__title Travel beyond limits.
     p.hero__lead Start your travel at an affordable price with Travelly <br> Contact us now bellow
     +btn('Book now', 'hero__link')(href='/')
-    video.hero__video-bg(autoplay, muted, loop)
+    video.hero__video-bg(preload='auto', autoplay, muted, loop)
       source(src='img/video.h264.mp4', type='video/mp4', codecs='avc1.4D401E')

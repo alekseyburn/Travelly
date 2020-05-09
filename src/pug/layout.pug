@@ -13,11 +13,12 @@ html(class='no-js', lang='en')
     meta(name='format-detection', content='email=no')
     meta(content='notranslate', name='google')
     meta(name='robots', content='index,follow')
-    link(rel='icon', href='/img/favicon/icon-airplane.svg')
+    link(rel='icon', href='favicon.svg')
 
     block meta
 
     block head
+      link(rel='preload', href='css/style.css', as='style')
       link(rel='stylesheet', href='css/style.css')
       script(src='js/bundle.js', defer)
 
