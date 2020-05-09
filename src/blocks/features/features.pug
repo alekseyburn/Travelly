@@ -18,17 +18,17 @@ mixin features(classes)
 
   ul(class=`${allClasses.length > 0 ? `${allClasses}` : ``} features`)&attributes(attributes)
     li.features__item.features__item--self-made
-      svg.features__svg(width='100', height='100')
+      svg.features__svg(width='100', height='100', aria-hidden='true')
         use(xlink:href='img/sprite.svg#icon-route')
       h3.features__title Travel
       p.features__text Travel in over 250 countries with no effort.
     li.features__item.features__item--our
-      svg.features__svg(width='100', height='100')
+      svg.features__svg(width='100', height='100', aria-hidden='true')
         use(xlink:href='img/sprite.svg#icon-bed')
       h3.features__title Hotel
       p.features__text Hotels located near popular areas.
     li.features__item.features__item--economy
-      svg.features__svg(width='100', height='100')
+      svg.features__svg(width='100', height='100', aria-hidden='true')
         use(xlink:href='img/sprite.svg#icon-plane')
       h3.features__title Fly
       p.features__text  Flight included in every purchased trip.
